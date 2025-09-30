@@ -1,0 +1,474 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hepta+Slab', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Шапка */
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 45px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    padding-bottom: 5px; /* Отступ для полоски */
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: rgba(159, 146, 34, 1); /* Цвет полоски */
+    transform: scaleX(0); /* Скрываем полоску */
+    transition: transform 0.3s ease-in-out; /* Анимация */
+}
+
+header nav a:hover::after {
+    transform: scaleX(1); /* Показываем полоску при наведении */
+}
+
+header .logo {
+    font-family: serif;
+    font-weight: bold;
+    color: #000000;   
+    font-size: 30px;
+    position: absolute;
+    left: 40px;
+    top: 20px; 
+}
+
+header .logo2 {
+    font-family: serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 30px;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+}
+
+.logo3 {
+    position: absolute;
+    left: 41px;
+    margin-top: 35px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Ibarra Real Nova', sans-serif;
+}
+/*
+header nav ul li:not(.active) a:hover {
+    background-color:;
+}
+*/
+
+
+
+img {
+    position: absolute;
+    left: 76px;
+    margin-top: 47px;
+}
+
+.ikonka {
+    width: 4%;
+    height: 8%;
+    position: absolute;
+    left: 320px;
+    margin-top: -10px;
+}
+
+.phone-number {
+    text-decoration: underline; /* Подчеркнутый текст */
+    color: rgba(159, 146, 34, 1);
+    font-family: 'Ibarra Real Nova', sans-serif;
+    position: absolute;
+    right: 180px;
+    margin-top: 35px;
+}
+
+.ikonka2 {
+    width: 2%;
+    height: 4%;
+    position: absolute;
+    left: 87%;
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+.call {
+    position: absolute;
+    font-size: 16px;
+    color: rgba(159, 146, 34, 1);
+    margin-top: 35px;
+    left: 89.4%;
+    font-family: serif;
+}
+
+.astra {
+    position: absolute;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    font-family: serif;
+    left: 83%;
+    top: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+header nav a {
+    color: rgba(0, 0, 0, 0.66);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+ul {
+   margin-left: 170px; 
+}   
+
+
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container-about {
+    max-width: 100%; /* Ширина равна ширине родительского элемента */
+    height: 1305px;
+    background-image: url('/img/fon.jpg');
+    background-size: cover; /* Растягиваем изображение на весь блок, сохраняя пропорции */
+    background-position: center; /* Центруем изображение */
+    background-repeat: no-repeat; 
+    filter: brightness();
+}
+
+/*Затемнения фона без текста*/
+.container-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный слой для затемнения */
+    z-index: -1; /* Размещаем слой позади текста */
+}
+
+.text-about {
+    font-size: 64px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    left: 80px;
+    top: 15%;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-about2 {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    top: 44%;
+    left: 250px;
+}
+
+.text-about3 {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 24px;
+    text-align: left;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    top: 68%;
+    left: 40px;
+}
+
+.text-about4 {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 24px;
+    text-align: left;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    top: 68.1%;
+    left: 280px; 
+}
+
+.text-about4::before {
+    content: '';              /* Генерируем пустой элемент */
+    display: inline-block;    /* Показываем как строчный блок */
+    width: 12px;              /* Диаметр круга */
+    height: 12px;             /* Диаметр круга */
+    border-radius: 100%;       /* Круглая форма */
+    background-color: rgba(197, 185, 98, 1);    /* Цвет кружочка */
+    margin-right: 40px;        /* Небольшой отступ от текста */
+}
+
+.btn {
+    width: 361px;
+    height: 68px;
+    background-color: rgba(197, 185, 98, 1);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 85%;
+    left: 40px;
+    border: none;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(139, 131, 65);
+}
+
+.btn2 {
+    width: 361px;
+    height: 68px;
+    background-color: transparent;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 85%;
+    left: 480px;
+    border: 1px solid #ffffff;
+    transition: all 500ms ease;
+    border-radius: 2px;
+    cursor: pointer;
+}  
+
+.btn2:hover {
+    background-color: #333333b1;
+}
+
+/*КОНТЕЙНЕР СЕРВИСА*/
+.container-services {
+    background-color: rgb(255, 255, 255);
+}
+
+.plans-container { 
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 120px; /* Расстояние между блоками */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /*Свойства, задающие размеры и количество колонок или рядов грид-раскладки соответственно.*/
+    
+}
+
+.plan-block {
+    width: 470px;
+    height: 488px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 1%;
+    transition: transform 1s ease-in-out; /* Плавное увеличение */
+    cursor: pointer;
+    background-size: cover; /* Растягивать изображение на всю область */
+    background-position: center; /* Центральное расположение изображения */
+    background-repeat: no-repeat; /* Запретить повторение изображения */
+    padding: 20px;
+    position: relative;
+     margin:auto;
+    margin-bottom: -30px;
+}
+
+.plan-block .text1 {
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 50px;
+}
+
+.plan-block .text2 {
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 20px;
+}
+
+.plan-block .text3 {
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 20px;
+}
+
+.plan-block .text4 {
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 20px;
+}
+
+/*WORKS----------------------------------------------------------------------------------------*/
+.container-works {
+    background-image: url('/img/fonworks.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+    color: #fff;
+    filter: brightness();
+}
+
+.container-works::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный слой для затемнения */
+    z-index: -5; /* Размещаем слой позади текста */
+}
+
+.zagolovok-works {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+.works {
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+.works2 {
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+h2 {
+   font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    text-align: center; 
+}
+
+/* Основной контент */
+section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+section ol {
+    list-style-type: decimal;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+section p {
+    margin-top: 1rem;
+}
+
+/* Контакты */
+#contacts {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+}
+
+
+
+#contacts p {
+    margin-top: 0.5rem;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Подвал */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+    padding: 1rem 0;
+    text-align: center;
+    
+}
+
+
+    .plans-container {
+        justify-content: space-between;
+    }
+
+
+
+    /*-------------------------------------------------------------------------------------------------------------*/
+
+   @media (max-width: 768px) {
+    /* Стили для планшетов */
+}
+
+@media (max-width: 480px) {
+    /* Стили для мобильных устройств */
+}

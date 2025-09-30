@@ -1,0 +1,593 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hepta+Slab', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Шапка */
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: rgba(159, 146, 34, 1); /* Цвет полоски */
+    transform: scaleX(0); /* Скрываем полоску */
+    transition: transform 0.3s ease-in-out; /* Анимация */
+}
+
+header nav a:hover::after {
+    transform: scaleX(1); /* Показываем полоску при наведении */
+}
+
+header .logo {
+    font-family: serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 30px;
+}
+
+header .logo2 {
+    font-family: serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 30px;
+}
+
+.logo3 {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Ibarra Real Nova', sans-serif;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+header nav a {
+    color: rgba(0, 0, 0, 0.66);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Контактная информация */
+.phone-number {
+    text-decoration: underline;
+    color: rgba(159, 146, 34, 1);
+    font-family: 'Ibarra Real Nova', sans-serif;
+}
+
+.ikonka {
+    width: 5%;
+    height: 6%;
+    position: absolute;
+    left: 115px;
+    margin-top: 7px;
+}
+
+.ikonka2 {
+    width: 2%;
+    height: 4%;
+    font-size: 16px;
+}
+
+.call {
+    font-size: 16px;
+    color: rgba(159, 146, 34, 1);
+    font-family: serif;
+}
+
+.astra {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    font-family: serif;
+}
+
+/* Основная секция (About) */
+.container-about {
+    width: 100%;
+    height: auto;
+    background-image: url('/img/fon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness();
+    padding: 100px 0;
+    position: relative;
+}
+
+.container-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.text-about {
+    font-size: 64px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 80px;
+    margin-top: 15%;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-about2 {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 250px;
+    margin-top: 44%;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-about3 {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 24px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 68%;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-about4 {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 24px;
+    text-align: left;
+    margin-left: 280px;
+    margin-top: 68.1%;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-about4::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: rgba(197, 185, 98, 1);
+    margin-right: 40px;
+}
+
+.button-about {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 361px;
+    height: 68px;
+    background-color: rgba(197, 185, 98, 1);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(139, 131, 65);
+}
+
+.btn2 {
+    width: 361px;
+    height: 68px;
+    background-color: transparent;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid #ffffff;
+    transition: all 500ms ease;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    background-color: #333333b1;
+}
+
+/* Контейнер с услугами */
+.plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 20px;
+}
+
+.plan-block {
+    width: 470px;
+    height: 488px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 1%;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    margin-bottom: -30px;
+}
+
+.plan-block .text1 {
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 50px;
+}
+
+.plan-block .text2 {
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 20px;
+}
+
+.plan-block .text3 {
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 20px;
+}
+
+.plan-block .text4 {
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    right: 20px;
+}
+
+/*WORKS----------------------------------------------------------------------------------------*/
+.container-works {
+    width: 100%;
+    height: auto;
+    background-image: url('/img/fonworks.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+    color: #fff;
+    filter: brightness();
+    padding: 100px 0;
+    position: relative;
+}
+
+.container-works::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный слой для затемнения */
+    z-index: -5; /* Размещаем слой позади текста */
+}
+
+.zagolovok-works {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+.works {
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+.works2 {
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+h2 {
+   font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    text-align: center; 
+}
+
+/* Основной контент */
+section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+section ol {
+    list-style-type: decimal;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+section p {
+    margin-top: 1rem;
+}
+
+/* Контакты */
+#contacts {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+}
+
+
+
+#contacts p {
+    margin-top: 0.5rem;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Подвал */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+    padding: 1rem 0;
+    text-align: center;
+    
+}
+
+/* Адаптивная вёрстка */
+@media (max-width: 768px) {
+    /* Стили для планшетов */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .logo2 {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 10px;
+    }
+
+    .phone-number {
+        font-size: 10px;
+    }
+
+    .call {
+        font-size: 10px;
+    }
+
+    .astra {
+        font-size: 10px;
+    }
+
+    .container-about {
+        padding: 10px 0;
+    }
+
+    .text-about {
+        font-size: 48px;
+        margin-left: 20px;
+        margin-top: 10%;
+    }
+
+    .text-about2 {
+        font-size: 24px;
+        margin-left: 20px;
+        margin-top: 30%;
+    }
+
+    .text-about3 {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-top: 50%;
+    }
+
+    .text-about4 {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-top: 50%;
+    }
+
+    .button-about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn, .btn2 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-block {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .text1, .text2, .text3, .text4 {
+        font-size: 32px;
+    }
+
+    #contacts {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Стили для мобильных устройств */
+    header {
+        padding: 0.5rem;
+    }
+
+    header .logo {
+        font-size: 14px;
+    }
+
+    header .logo2 {
+        font-size: 14px;
+    }
+
+    .logo3 {
+        font-size: 12px;
+    }
+
+    .ikonka {
+        font-size: 12px;
+        width: 29px;
+    }
+
+    .call {
+        font-size: 12px;
+    }
+
+    .astra {
+        font-size: 12px;
+    }
+
+    .container-about {
+        font-size: 22px;
+        padding: 20px 0;
+    }
+
+    .text-about {
+        font-size: 22px;
+        margin-left: 10px;
+        margin-top: 5%;
+    }
+
+    .text-about2 {
+        font-size: 20px;
+        margin-left: 22px;
+        margin-top: 20%;
+    }
+
+    .text-about3 {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-top: 40%;
+    }
+
+    .text-about4 {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-top: 40%;
+    }
+
+    .btn, .btn2 {
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .plan-block {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .text1, .text2, .text3, .text4 {
+        font-size: 14px;
+    }
+
+    .container-works {
+        font-size: 12px;
+    }
+
+    .zagolovok-works {
+        font-size: 20px;
+    }
+
+    .works {
+        font-size: 15px;
+    }
+
+    .works2 {
+        font-size: 15px;
+    }
+
+    #contacts {
+        padding: 0.5rem;
+    }
+}
